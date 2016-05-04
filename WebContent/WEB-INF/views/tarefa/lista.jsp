@@ -37,16 +37,13 @@
 						onClick="finalizaAgora(${tarefas.id})"> Finaliza agora! </a></td>
 				</c:if>
 				<c:if test="${tarefas.finalizado eq 1}">
-					<td id="tarefa_data_${tarefa.id}">
-					  <fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy" />
-					</td>
+					<td id="tarefa_data_${tarefa.id}"><fmt:formatDate
+							value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy" /></td>
 				</c:if>
-				<td>
 				<td align="center"><a href="mostraTarefa?id=${tarefas.id}">e</a></td>
 				<td align="center"><a href="removeTarefa?id=${tarefas.id}">x</a></td>
 				<fmt:formatDate value="${tarefas.dataFinalizacao.time}"
 					pattern="dd/MM/yyyy" />
-				</td>
 			</tr>
 		</c:forEach>
 	</table>

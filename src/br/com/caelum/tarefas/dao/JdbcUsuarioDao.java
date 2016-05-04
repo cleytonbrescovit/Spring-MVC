@@ -1,4 +1,4 @@
-package br.com.caelum.tarefa.dao;
+package br.com.caelum.tarefas.dao;
 
 import java.sql.Connection;
 
@@ -21,10 +21,6 @@ public class JdbcUsuarioDao {
     }
 
 	public boolean existeUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-	
-	
-
 }

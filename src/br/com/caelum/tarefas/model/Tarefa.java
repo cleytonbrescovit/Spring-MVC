@@ -2,12 +2,17 @@ package br.com.caelum.tarefas.model;
 
 import java.util.Calendar;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+@Entity
 public class Tarefa {
+	
+	@Id
+	@GeneratedValue
 	private Long id;
 	
 	@NotNull(message="A descrição deve ser preenchida")
@@ -17,6 +22,7 @@ public class Tarefa {
 	private int finalizado;
 	
 	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
 	private Calendar dataFinalizacao;	
 	
 	public Tarefa() {

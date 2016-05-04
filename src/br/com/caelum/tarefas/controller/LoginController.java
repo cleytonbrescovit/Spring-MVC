@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.caelum.tarefa.dao.JdbcUsuarioDao;
+import br.com.caelum.tarefas.dao.JdbcUsuarioDao;
 import br.com.caelum.tarefas.model.Usuario;
 
 @Controller
