@@ -1,6 +1,14 @@
 package br.com.caelum.tarefas.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Usuario {
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
 	private String user;
 	private String pass;
 	

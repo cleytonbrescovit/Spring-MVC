@@ -12,8 +12,8 @@ public class AdicionaTarefa {
 	public static void main(String[] arg){
 		
 		Tarefa tarefa = new Tarefa();
-		tarefa.setDescricao("para remopver");
-		tarefa.setFinalizado(0);
+		tarefa.setDescricao("para remover");
+		tarefa.setFinalizado(false);
 		tarefa.setDataFinalizacao(Calendar.getInstance());
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
