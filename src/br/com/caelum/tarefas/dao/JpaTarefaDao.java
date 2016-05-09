@@ -1,5 +1,6 @@
 package br.com.caelum.tarefas.dao;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -40,7 +41,17 @@ public class JpaTarefaDao implements TarefaDao {
 	public void finaliza(Long id) {
 		Tarefa tarefa = buscaPorId(id);
 		tarefa.setFinalizado(true);
-		tarefa.setDataFinalizacao(Calendar.getInstance());
+		// tarefa.setDataFinalizacao(Calendar.getInstance());
+
+		SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
+
+		String data = "";
+
+		Calendar hoje = Calendar.getInstance();
+
+		data = formatoData.format(hoje.getTime());
+
+		tarefa.setDataFinalizacao(data);
 	}
 
 }

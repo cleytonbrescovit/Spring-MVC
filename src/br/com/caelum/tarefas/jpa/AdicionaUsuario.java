@@ -10,8 +10,8 @@ public class AdicionaUsuario {
 public static void main(String[] arg){
 		
 		Usuario usuario = new Usuario();
-		usuario.setUser("teste");
-		usuario.setPass("teste");
+		usuario.setUser("a");
+		usuario.setPass("a");
 		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("usuarios");
 		EntityManager manager = factory.createEntityManager();

@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import br.com.caelum.tarefas.model.Usuario;
 import connection.ConnectionFactory;
 
@@ -20,7 +23,7 @@ public class JdbcUsuarioDao {
 	}
 
 	public boolean existeUsuario(Usuario usuario) {
-		String sql = "select * from usuarios where login = ? and senha = ?";
+		String sql = "select * from Usuario where user = ? and pass = ?";
 
 		try {
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
